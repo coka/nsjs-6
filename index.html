@@ -1,49 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/moon.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          <textarea data-template>
+            # Zašto je JavaScript važan?
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Ko sam ja?
+            - <span class="fragment">https://github.com/coka</span>
+            - <span class="fragment">LambdaWorks 🍰</span>
+            - <span class="fragment">TypeScript</span>
+            - <span class="fragment">radionice && volontiranje</span>
+          </textarea>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              Tema predavanja
+              ## Zašto je JavaScript važan?
+            </textarea>
+          </section>
+          <section data-markdown>
+            <textarea data-template>
+              Tema <span style="color:red">performansa</span>
+              ## Zašto je JavaScript važan?
+            </textarea>
+          </section>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # ŠKK JS?!
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            <img data-src="brendan.jpeg">
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ```c++
+            inline constexpr auto for_each = []&lt;
+              Range R,
+              Iterator I = iterator_t<R>,
+              IndirectUnaryInvocable<I> Fun>(R&& r, Fun fun)
+                requires Range<indirect_result_t<Fun, I>> {
+                  return std::forward<R>(r)
+                  | view::transform(std::move(fun))
+                  | view::join;
+              };
+            ```
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Radionice generativnog dizajna
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Zašto je open source važan?
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ## Elementi open source-a
+            - <span class="fragment">postoji</span>
+            - <span class="fragment">čačkam</span>
+            - <span class="fragment">koristim</span>
+            - <span class="fragment">doprinosim</span>
+            - <span class="fragment">vodim</span>
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Hacktoberfest
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Rendered Text
+          </textarea>
+        </section>
+        <section>
+          <section data-markdown>
+            <textarea data-template>
+              # Vega IT Code for a Cause 2
+            </textarea>
+          </section>
+          <section>
+            <img data-src="srce.jpg" />
+          </section>
+        </section>
+        <section>
+          <section>
+            <img data-src="gentoo.png" />
+          </section>
+          <section>
+            <img data-src="stallman.jpg" />
+          </section>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Zašto ste <span style="color:red">vi</span> važni?
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            ### Šta konkretno?
+            - ## Centar Srce
+            - ## SOS Ženski Centar
+            - ## KOMPAS
+            - bojan.coka@gmail.com
+          </textarea>
+        </section>
+        <section data-markdown>
+          <textarea data-template>
+            # Q & A
+            Hvala!
+          </textarea>
+        </section>
+      </div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          }
+        ],
+        transition: "none"
+      });
+    </script>
+  </body>
 </html>
